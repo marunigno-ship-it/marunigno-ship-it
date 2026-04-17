@@ -39,3 +39,4 @@ If you find the project meaningful, consider starring the repo or supporting via
 
 **Marussa Metocharaki**  
 Greece • April 2026
+
