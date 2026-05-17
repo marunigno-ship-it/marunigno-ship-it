@@ -1,42 +1,39 @@
-# Hi, I'm Marussa Metocharaki (@marunigno) 👋
+# Marussa Metocharaki (@marunigno)
 
-**Solo researcher & founder of QERRA-v2**
+**Solo researcher · founder of QERRA-v2 Classical · Greece**
 
-I am building an open-source **hybrid quantum-classical ethical decision engine** designed as a practical safety layer for humanoid robots and high-stakes AI systems.
-
-### What is QERRA-v2?
-A transparent, morally grounded system that helps autonomous agents make safer decisions by combining:
-- Real-time toxicity & manipulation detection
-- SEMEV-12 ethical vector framework (12 real-life-based dimensions)
-- Deterministic safety kernel with region-aware logic
-
-**Current status:** Early experimental prototype  
-✅ Live public API (classical safety layer)  
-✅ Real 8-qubit W-state executed on IBM quantum hardware  
-🔶 Quantum layer currently simulated
-
-**Live API:** [https://qerra-v2-api-production.up.railway.app/docs](https://qerra-v2-api-production.up.railway.app/docs)  
-**Public demo key:** `qerra2026_public_demo_key`
-
-**Main repository:** [QERRA-v2](https://github.com/marunigno-ship-it/QERRA-v2)
+I am building an open-source, **100% classical**, fully explainable ethical evaluation engine designed as a transparent safety layer for humanoid robots and high-stakes AI systems.
 
 ---
 
-### Open to collaboration
-I am actively looking for researchers, engineers, and organizations working in **AI safety, ethical AI, humanoid robotics, or quantum computing** who want to test the API, give feedback, or explore joint work.
+### QERRA-v2 Classical
 
-If this aligns with what you do, feel free to reach out.
+Built on the **SEMEV-12 framework** — 12 immutable, human-centred ethical vectors.  
+Every result is fully traceable: exact vectors activated, per-vector scores, and human-readable reasoning. No neural networks. No black boxes.
 
-**Phone:** +30 697 183 0300  
-**Email:** marunigno@gmail.com
+**Current state:** Functional research prototype with live public API, calibrated regression benchmarks, and ROS 2 bridge (subscriber + publishers).
+
+**Key features:**
+- Hybrid detection (semantic similarity + regular expression patterns)
+- Weighted multi-vector scoring with nuance handling
+- ROS 2 integration for Behaviour Trees and real robotics pipelines
+
+**Repositories:**
+- [QERRA-v2-classical](https://github.com/marunigno-ship-it/QERRA-v2-classical) — active classical edition
+- [QERRA-v2](https://github.com/marunigno-ship-it/QERRA-v2) — original hybrid research project
 
 ---
 
-**Thank you for visiting.**  
-If you find the project meaningful, consider starring the repo or supporting via [GitHub Sponsors](https://github.com/sponsors/marunigno-ship-it).
+### Open to Collaboration
+
+Looking for researchers, engineers, and organizations in **AI safety, ethical AI, and humanoid robotics** who want to test the system, give feedback, or explore integration.
+
+**Contact:** marunigno@gmail.com
 
 ---
 
-**Marussa Metocharaki**  
-Greece • April 2026
+If this vision resonates with you, consider starring the repositories or supporting via [GitHub Sponsors](https://github.com/sponsors/marunigno-ship-it).
 
+This project exists because ethical reasoning should be a foundational, auditable layer in every system that acts alongside humans — not an afterthought.
+
+**Marussa Metocharaki · Greece · 2026**
