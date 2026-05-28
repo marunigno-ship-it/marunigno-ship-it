@@ -36,4 +36,6 @@ If this vision resonates with you, consider starring the repositories or support
 
 This project exists because ethical reasoning should be a foundational, auditable layer in every system that acts alongside humans — not an afterthought.
 
+*QERRA-v2 Classical is an experimental research tool. It has not been independently validated by any academic institution or robotics lab. Commercial licenses are available for evaluation and non-safety-critical use.*
+
 **Marussa Metocharaki · Greece · 2026**
