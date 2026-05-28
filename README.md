@@ -11,8 +11,7 @@ I am building an open-source, **100% classical**, fully explainable ethical eval
 Built on the **SEMEV-12 framework** — 12 immutable, human-centred ethical vectors.  
 Every result is fully traceable: exact vectors activated, per-vector scores, and human-readable reasoning. No neural networks. No black boxes.
 
-**Current state:** Functional research prototype with live public API, calibrated regression benchmarks, and ROS 2 bridge (subscriber + publishers).
-
+**Current state:**  v1.8.8 — Stable Classical Research Engine. All 12 SEMEV-12 vectors active and verified. Live public API. Working ROS 2 bridge.
 **Key features:**
 - Hybrid detection (semantic similarity + regular expression patterns)
 - Weighted multi-vector scoring with nuance handling
@@ -21,6 +20,7 @@ Every result is fully traceable: exact vectors activated, per-vector scores, and
 **Repositories:**
 - [QERRA-v2-classical](https://github.com/marunigno-ship-it/QERRA-v2-classical) — active classical edition
 - [QERRA-v2](https://github.com/marunigno-ship-it/QERRA-v2) — original hybrid research project
+- **Prior Art (Zenodo):** https://doi.org/10.5281/zenodo.20356394
 
 ---
 
