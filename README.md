@@ -1,41 +1,46 @@
-# Marussa Metocharaki (@marunigno)
-Solo Researcher & Founder of QERRA-v2 Classical · Greece
+# Marussa Metocharaki
+**Independent developer & solo founder · Greece**
 
-I am building an open-source, fully explainable moral evaluation engine designed as a transparent safety layer for humanoid robots and autonomous AI systems.
-
----
-
-### About My Work
-
-My research focuses on practical, computable moral reasoning that evaluates proposed actions before execution. 
-
-Rather than relying on uninterpretable black-box models or rigid rule lists, I founded **QERRA-v2 Classical** based on the **SEMEV-12 framework** — 12 universal, human-centred moral and ethical dimensions grounded in direct observation of recurring human harm and pressure.
-
-* **100% Traceable & Explainable:** Every evaluation returns exact active vectors, per-vector metrics, and human-readable reasoning strings.
-* **Hybrid Architecture:** Classical scoring engine combining semantic similarity (`sentence-transformers`) with deterministic, negation-aware regex safety overrides.
-* **Robotics Middleware:** Built for real-time HRI safety, featuring the **QERRA-HSR v0.1** physical safety companion, ROS 2 Action Server bridges, and PyTrees condition nodes.
+I am building **QERRA-v2 Classical**: open-source safety and ethical software for autonomous robots (ROS 2 & Behavior Trees).
 
 ---
 
-### Repositories & Prior Art
+### Who I Am & How I Build
 
-* **[QERRA-v2-classical](https://github.com/marunigno-ship-it/QERRA-v2-classical)** — Active classical edition (`v1.9.0` engine / `v2.0-alpha` API).
-* **[QERRA-v2](https://github.com/marunigno-ship-it/QERRA-v2)** — Original research repository.
-* **Prior Art (Zenodo DOI):** [https://doi.org/10.5281/zenodo.21028900](https://doi.org/10.5281/zenodo.21028900)
+I am self-taught and working alone from Greece. I have no team, no university backing, and no investors. 
+
+I come up with the safety rules and the logic myself, and I use AI tools to help me turn those ideas into working Python code, run tests, and fix bugs. 
+
+I don't think robot safety should be a black box that nobody can understand, and I don't think robots should blindly obey abusive commands. I build software that sits between the robot's brain and its wheels so we can always see and verify why a robot stopped or refused an order.
 
 ---
 
-### Let's Connect & Collaborate
+### What I Built (3 Layers)
 
-I welcome discussions, integration experiments, and feedback from researchers, engineers, and founders working in **AI safety**, **humanoid robotics**, **HRI safety**, and **autonomous deliberation**.
+* **Layer 1 — Physical Reflex (QERRA-HSR):**  
+  Stops the robot in under 1 millisecond if a human is in danger or screaming.  
+  * *Tested:* An outside team tested it in simulation and confirmed **0.0 ms delay** to command the stop, and **under 1 cm stopping distance**.  
+  * *Recovery:* Routine tasks resume on their own once safe. Sensitive or delicate tasks freeze and wait for a person to check in before continuing.
+* **Layer 2 — Moral Conscience (SEMEV-12):**  
+  Evaluates 12 human ethical dimensions. If someone orders the robot to do something abusive or dishonest (like forcing workers through breaks or falsifying records), the robot halts and **physically shakes its head "No"** in simulation to refuse the order.
+* **Layer 3 — Social Manners (QERRA-THRIVE):**  
+  Picks the polite way to move—like quiet "whisper mode" in hospital hallways or staying off garden lawns.
 
+---
+
+### Real Evidence & Verification
+
+* **29 out of 29 automated tests passing** in PyCharm across the reflex and ethics suites.
+* **Tested in Webots simulation** on a PAL Robotics TIAGo humanoid robot across 5 working scenarios.
+* **Live public API** running on Hugging Face Spaces.
+* **Archived on Zenodo:** https://doi.org/10.5281/zenodo.22077843
+
+---
+
+### Links & Contact
+
+* **Code:** https://github.com/marunigno-ship-it/QERRA-v2-classical
+* **Live API:** https://qerra-v2-api-classical-qerra-v2-api-classical.hf.space/docs
 * **Email:** marunigno@gmail.com
-* **Support:** If you find this framework useful or interesting, starring the repositories or supporting via [GitHub Sponsors](https://github.com/sponsors/marunigno-ship-it) directly supports independent research.
 
----
-
-> *"Moral reasoning should be a foundational, auditable layer built into every autonomous system that acts alongside humans — not an afterthought."*
-
-*QERRA-v2 Classical is an experimental research tool developed under the AGPL-3.0 license. It operates at the deliberation layer, not the hardware safety layer.*
-
-Marussa Metocharaki · Greece · 2026
+*I welcome code reviews, technical critique, and collaboration with researchers working on robot safety and human-robot interaction.*
