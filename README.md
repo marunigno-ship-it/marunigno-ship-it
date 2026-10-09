@@ -1,7 +1,8 @@
 # Marussa Metocharaki
 Independent Researcher in Robot Ethics & Supervisory Safety · Greece
 
-ORCID: [0009-0009-4100-9881](https://orcid.org/0009-0009-4100-9881) · Zenodo DOI: [10.5281/zenodo.22077843](https://doi.org/10.5281/zenodo.22077843)
+ORCID: [0009-0009-4100-9881](https://orcid.org/0009-0009-4100-9881) 
+Zenodo DOI: [10.5281/zenodo.22077843](https://doi.org/10.5281/zenodo.22077843)
 
 I design and maintain **QERRA-v2 Classical**: an auditable, three-layer supervisory execution guard for autonomous robots and mobile manipulators (ROS 2 & Behavior Trees).
 
