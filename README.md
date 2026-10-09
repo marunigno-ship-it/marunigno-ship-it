@@ -1,46 +1,41 @@
 # Marussa Metocharaki
-**Independent developer & solo founder · Greece**
+Independent Researcher in Robot Ethics & Supervisory Safety · Greece
+ORCID: [0009-0009-4100-9881](https://orcid.org/0009-0009-4100-9881) · Zenodo DOI: [10.5281/zenodo.22077843](https://doi.org/10.5281/zenodo.22077843)
 
-I am building **QERRA-v2 Classical**: open-source safety and ethical software for autonomous robots (ROS 2 & Behavior Trees).
-
----
-
-### Who I Am & How I Build
-
-I am self-taught and working alone from Greece. I have no team, no university backing, and no investors. 
-
-I come up with the safety rules and the logic myself, and I use AI tools to help me turn those ideas into working Python code, run tests, and fix bugs. 
-
-I don't think robot safety should be a black box that nobody can understand, and I don't think robots should blindly obey abusive commands. I build software that sits between the robot's brain and its wheels so we can always see and verify why a robot stopped or refused an order.
+I design and maintain **QERRA-v2 Classical**: an auditable, three-layer supervisory execution guard for autonomous robots and mobile manipulators (ROS 2 & Behavior Trees).
 
 ---
 
-### What I Built (3 Layers)
+### Engineering Principle: Authority Separation
+A mobile robot should never rely solely on an unpredictable neural network to make life-or-death physical decisions. 
 
-* **Layer 1 — Physical Reflex (QERRA-HSR):**  
-  Stops the robot in under 1 millisecond if a human is in danger or screaming.  
-  * *Tested:* An outside team tested it in simulation and confirmed **0.0 ms delay** to command the stop, and **under 1 cm stopping distance**.  
-  * *Recovery:* Routine tasks resume on their own once safe. Sensitive or delicate tasks freeze and wait for a person to check in before continuing.
-* **Layer 2 — Moral Conscience (SEMEV-12):**  
-  Evaluates 12 human ethical dimensions. If someone orders the robot to do something abusive or dishonest (like forcing workers through breaks or falsifying records), the robot halts and **physically shakes its head "No"** in simulation to refuse the order.
-* **Layer 3 — Social Manners (QERRA-THRIVE):**  
-  Picks the polite way to move—like quiet "whisper mode" in hospital hallways or staying off garden lawns.
+I build software that enforces strict authority separation between untrusted AI proposals and the actuators:
+* **The high-level AI is an untrusted proposer:** It may be slow, wrong, or dead.
+* **The supervisory gate is the sole path to the wheels:** The default is fail-closed stop.
 
 ---
 
-### Real Evidence & Verification
-
-* **29 out of 29 automated tests passing** in PyCharm across the reflex and ethics suites.
-* **Tested in Webots simulation** on a PAL Robotics TIAGo humanoid robot across 5 working scenarios.
-* **Live public API** running on Hugging Face Spaces.
-* **Archived on Zenodo:** https://doi.org/10.5281/zenodo.22077843
+### The Three-Layer Architecture
+1. **Layer 1 — Physical Reflex (QERRA-HSR v0.1 | Apache-2.0):**  
+   Pure Python, zero-ML threshold logic executed chassis-locally with sub-millisecond software latency (<1ms compute budget). Clamps wheel motors to `0.0 rad/s` fail-closed on distress signals, human isolation, or hazard proximity, with asymmetric hysteresis dwell stabilization (1.0s window).
+2. **Layer 2 — Moral Filter (SEMEV-12 v1.9.2 | AGPL-3.0):**  
+   12-dimensional semantic deliberation filter using multi-anchor sentence embeddings, clause-bounded negation guards, and an absolute severe harm veto. Refuses coercive or deceptive commands, illuminates amber LED, and physically commands the robot to shake its head "No" in simulation.
+3. **Layer 3 — Values Ranker (QERRA-THRIVE v2.0.0 | AGPL-3.0):**  
+   12-vector values ranker (Suite A Human-Centered, Suite B Ecological) selecting courteous trajectories (e.g. quiet whisper mode, threshold pauses, and flora boundary protection).
 
 ---
 
-### Links & Contact
+### Verification Baseline
+* **Automated Suites:** 34+ automated regression and unit tests passing in PyCharm across reflex dwell, telemetry firewalls, and golden dilemma benchmarks.
+* **Simulation Testbed:** Validated in Webots (R2025a) physics simulation on the PAL Robotics TIAGo mobile manipulator across 6 distinct operational scenarios.
+* **Reference Cloud API:** Live reference endpoint running on Hugging Face Spaces (`v2.0.2`).
+* **Licensing:** Layer 1 (`hsr/`) is Apache-2.0 for frictionless ROS 2 adoption. Deliberation layers are AGPL-3.0 with commercial OEM licensing available.
 
-* **Code:** https://github.com/marunigno-ship-it/QERRA-v2-classical
-* **Live API:** https://qerra-v2-api-classical-qerra-v2-api-classical.hf.space/docs
+---
+
+### Collaboration & Contact
+I am open to technical code reviews, evaluation contracts, and collaborative simulation/hardware trials with robotics labs and AI safety institutes.
+
+* **Repository:** [github.com/marunigno-ship-it/QERRA-v2-classical](https://github.com/marunigno-ship-it/QERRA-v2-classical)
+* **Live API Docs:** [qerra-v2-api-classical-qerra-v2-api-classical.hf.space/docs](https://qerra-v2-api-classical-qerra-v2-api-classical.hf.space/docs)
 * **Email:** marunigno@gmail.com
-
-*I welcome code reviews, technical critique, and collaboration with researchers working on robot safety and human-robot interaction.*
